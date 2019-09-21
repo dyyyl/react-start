@@ -13,8 +13,8 @@ it('renders without crashing', (): void => {
 
 afterEach(cleanup);
 
-describe('Button', (): void => {
-  test('should load and display input', (): void => {
+describe('Name Input', (): void => {
+  test('should load and display name input', (): void => {
     const { getByTestId } = render(<App />);
 
     const input = getByTestId('name');

@@ -24,7 +24,7 @@ const App: React.FC = (): JSX.Element => {
 
   return (
     <Layout>
-      <Title>Hello, {showName || 'world!'}</Title>
+      <Title>Hello, {showName || 'world'}!</Title>
       <Form onSubmit={handleSubmit}>
         {/* eslint-disable-next-line */}
         <label htmlFor="name">
