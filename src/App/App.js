@@ -8,21 +8,21 @@ import Title from 'shared/components/Title';
 import GlobalStyle from 'shared/styles/GlobalStyle';
 
 const App = () => {
+  const [nameInput, setNameInput] = useState('');
   const [name, setName] = useState('');
-  const [showName, setShowName] = useState('');
 
   const handleChange = (event) => {
-    setName(event.currentTarget.value);
+    setNameInput(event.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setShowName(name);
+    setName(nameInput);
   };
 
   return (
     <Layout>
-      <Title>Hello, {showName || 'world'}!</Title>
+      <Title>Hello, {name || 'world'}!</Title>
       <Form onSubmit={handleSubmit}>
         {/* eslint-disable-next-line */}
         <label htmlFor="name">
