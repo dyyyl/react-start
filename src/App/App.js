@@ -30,7 +30,6 @@ const App = () => {
           <Input
             type="text"
             name="name"
-            value={name}
             onChange={handleChange}
             data-testid="name"
             required
